@@ -1,0 +1,19 @@
+{
+  "name": "newtest",
+  "version": "1.0.0",
+  "description": "CRUD",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViktoryaSVA/NodeJS_task_CRUD.git"
+  },
+  "author": "SVA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViktoryaSVA/NodeJS_task_CRUD/issues"
+  },
+  "homepage": "https://github.com/ViktoryaSVA/NodeJS_task_CRUD#readme"
+}
