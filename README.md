@@ -1,7 +1,7 @@
 # CRUD NodeJS
 # Examples of requests
 # User
-###POST
+### POST
 
 ### http://localhost:3000/CreateUser
 ### {
