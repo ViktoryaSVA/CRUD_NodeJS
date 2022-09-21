@@ -1,13 +1,14 @@
+import mongoose from "mongoose";
 import {UserService} from "../services/user.service";
 
 const userService = new UserService();
+mongoose.connect(`mongodb://localhost:27017/${process.env.MONGODB_DB}`);
 
 export class UserController {
 
     async getAllUsers(req:any, res: any) {
         try {
             const users = await userService.getAllUsers();
-            console.log(users)
             res.send({
                     data: users,
                     status: 200
@@ -20,7 +21,6 @@ export class UserController {
             });
         }
     }
-
 
     async createUser(req:any, res: any) {
         try {

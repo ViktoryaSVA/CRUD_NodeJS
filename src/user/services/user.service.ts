@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+const mongoose = require('mongoose');
 
 const { ObjectId } = require('mongodb');
 const { userScheme } = require('../models/user.model');

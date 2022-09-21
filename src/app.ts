@@ -4,12 +4,14 @@ import 'dotenv/config';
 
 require('dotenv').config()
 
-const routesUser = require('./user/routes/user.route');
+const routeUsers = require('./user/routes/user.route');
+const routeAdmin = require('./admin/routes/admin.route');
 const router: Express = express();
 
 router.use(express.urlencoded({ extended: false }));
 router.use(express.json());
-router.use('/', routesUser);
+router.use('/', routeUsers);
+router.use('/Admin', routeAdmin);
 
 const httpServer = http.createServer(router);
 const PORT: any = process.env.PORT;
