@@ -1,4 +1,11 @@
 # CRUD NodeJS
+
+# Example of .env file
+
+    PORT = 3000
+    MONGODB_DB = your_db
+
+
 # Examples of requests
 # User
 ### POST
