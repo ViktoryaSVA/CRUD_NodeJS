@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+import { Request } from "express";
 
 const { adminSchema } = require('../models/admin.model');
 const Admin = mongoose.model("Admin", adminSchema);
@@ -10,11 +11,11 @@ export class AdminService {
         return await Admin.create(data);
     }
 
-    updateAdminInfo = async (req: any) => {
+    updateAdminInfo = async (req: Request) => {
         return await Admin.updateOne( {"_id": ObjectId(req.params.id)}, req.body);
     }
 
-    getAdminInfo = async (req: any) => {
+    getAdminInfo = async (req: Request) => {
         return await Admin.find();
     }
 

@@ -1,12 +1,13 @@
 import mongoose from "mongoose";
 import {UserService} from "../services/user.service";
+import { Request, Response } from "express";
 
 const userService = new UserService();
 mongoose.connect(`mongodb://localhost:27017/${process.env.MONGODB_DB}`);
 
 export class UserController {
 
-    async getAllUsers(req:any, res: any) {
+    async getAllUsers(req: Request, res: Response) {
         try {
             const users = await userService.getAllUsers();
             res.send({
@@ -22,7 +23,7 @@ export class UserController {
         }
     }
 
-    async createUser(req:any, res: any) {
+    async createUser(req: Request, res: Response) {
         try {
             await userService.createUser(req);
             res.send({
@@ -38,7 +39,7 @@ export class UserController {
         }
     }
 
-    async getUserById(req:any, res: any) {
+    async getUserById(req: any, res: Response) {
         try {
             const user = await userService.getUserById(req.params.id);
             res.send({
@@ -53,7 +54,7 @@ export class UserController {
         }
     }
 
-    async updateUser(req:any, res: any) {
+    async updateUser(req: Request, res: Response) {
         try {
             await userService.updateUser(req);
             res.send({
@@ -69,7 +70,7 @@ export class UserController {
         }
     }
 
-    async deleteUser(req:any, res: any) {
+    async deleteUser(req: any, res: Response) {
         try {
             const user = await userService.deleteUser(req.params.id);
             res.send({
