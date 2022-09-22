@@ -1,7 +1,14 @@
 # CRUD NodeJS
+
+# Example of .env file
+
+    PORT = 3000
+    MONGODB_DB = your_db
+
+
 # Examples of requests
 # User
-###POST
+### POST
 
 ### http://localhost:3000/CreateUser
 ### {
@@ -26,7 +33,7 @@
 ### DELETE
 ### http://localhost:3000/DeleteUser/_id
 
-#ADMIN
+# ADMIN
 ### POST
 ### http://localhost:3000/Admin/RegisterAdmin
 
